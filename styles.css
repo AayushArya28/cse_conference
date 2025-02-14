@@ -6,14 +6,14 @@ body {
 }
 
 .upper {
-  background-color: #0B6EB1;
+  /* background-color: #0B6EB1; */
   /* width: 95vw; */
   text-align: center;
   padding: 10px 20px;
 }
 
 #upper-logo {
-  height: 75px;
+  height: auto;
 }
 
 #photobanner {
@@ -23,6 +23,110 @@ body {
 
 }
 
+.navbar {
+  background: linear-gradient(to bottom, #0072c6, #005aa7); /* Blue gradient */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f0f0f0;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content li {
+  width: 100%;
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 10px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      top: 50px;
+      left: 0;
+      background: linear-gradient(to bottom, #0072c6, #005aa7);
+      padding: 10px 0;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      text-align: center;
+      width: 100%;
+  }
+
+  .nav-links li a {
+      display: block;
+      padding: 10px;
+  }
+}
+
+/* 
 #navbar {
   background: rgb(30, 80, 227);
   width: 98vw;
@@ -174,22 +278,21 @@ svg:hover {
   top: 0;
   width: 100vw;
   z-index: 0.5;
-  /* display: none; */
-
-}
+  display: none;
+} 
 
 #straight ul {
   display: flex;
   flex-direction: column;
-
+  
 }
 
 @media only screen and (min-device-width: 700px) {
   .straight-navbar {
     display: none;
-
   }
 }
+*/
 
 .heading {
   font-size: 24px;
