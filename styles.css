@@ -24,7 +24,8 @@ body {
   }
   
   .navbar {
-    background: linear-gradient(to bottom, #0072c6, #005aa7); /* Blue gradient */
+    background-color: #333;
+    overflow: hidden;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -32,22 +33,30 @@ body {
   }
   
   .nav-links {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     margin: 0;
+    padding: 0;
     display: flex;
+    justify-content: space-around;
   }
   
   .nav-links li {
+    float: left;
     position: relative;
   }
   
   .nav-links li a {
     display: block;
-    padding: 15px 20px;
-    text-decoration: none;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
     font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #ddd;
+    color: black;
   }
   
   .nav-links li:hover {
@@ -465,4 +474,92 @@ body {
   position: absolute;
   left: 0px;
   font-size: 30px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+}
+
+.fade img {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Ensure the navbar does not fade */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar .nav-links li {
+    float: left;
+}
+
+.navbar .nav-links li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
 }
