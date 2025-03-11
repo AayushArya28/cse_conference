@@ -1,0 +1,47 @@
+<div class="ham-nav hidden" id="ham-nav-1">
+    <div><span class="cross" id="close">X</span></div>
+    <ul>
+        <li><a href="#">Call For Papers</a></li>
+        <li><a href="#">Programme Schedule</a></li>
+        <li><a href="#">Conference Publications</a></li>
+        <li><a href="#">Committee</a></li>
+        <li><a href="#">Submission Guidelines</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</div>
+
+<div class="upper">
+    <img id="upper-logo" src="images/BIT-Mesra.png" alt="BIT Mesra Logo">
+</div>
+
+<nav class="navbar">
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#">About The Conference</a></li>
+        <li><a href="call-for-papers.html">Call For Papers</a></li>
+        <li><a href="programme-schedule.html">Programme Schedule</a></li>
+        <li><a href="conference-publications.html">Conference Publications</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="submission-guidelines.html">Submission Guidelines</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<script>
+    const ham = document.getElementById("mobile-menu");
+    const ham1 = document.getElementById("ham-nav-1");
+    ham.addEventListener("click", function () {
+        ham1.classList.toggle("flexbox");
+        ham1.classList.toggle("hidden");
+    });
+
+    const cross = document.getElementById("close");
+    cross.addEventListener("click", function () {
+        ham1.classList.toggle("flexbox");
+        ham1.classList.toggle("hidden");
+    });
+</script>
