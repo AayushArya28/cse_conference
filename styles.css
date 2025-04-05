@@ -671,7 +671,7 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -690,6 +690,7 @@ body {
     max-width: 350px;
   }
 }
+
 /* PhotoBanner Styles */
 #photobanner {
   position: relative;
@@ -706,7 +707,8 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(60%) blur(3px); /* Dim the image slightly for better text visibility */
+  filter: brightness(60%) blur(3px);
+  /* Dim the image slightly for better text visibility */
   transition: transform 0.5s ease;
 }
 
@@ -736,18 +738,23 @@ body {
 }
 
 .overlay-text .full-form {
-  font-size: 20px; /* Smaller full form */
-  margin-top: -10px; /* Bring it closer to the heading */
+  font-size: 20px;
+  margin-top: -10px;
   margin-bottom: 10px;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .overlay-text h2 {
-      font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
 
   .overlay-text p {
-      font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .overlay-text .full-form {
+    font-size: 0.9rem;
   }
 }
