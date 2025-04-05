@@ -772,7 +772,7 @@ footer {
 
 @media (max-width: 768px) {
   #photobanner {
-    max-height: 300px;
+    max-height: 240px;
   }
 
   .overlay-text h2 {
