@@ -15,17 +15,6 @@ body {
   height: auto;
 }
 
-#photobanner {
-  height: 21rem;
-  width: 100%;
-}
-
-#photobanner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .navbar {
   background: linear-gradient(to bottom, #0072c6, #005aa7);
   /* Blue gradient */
@@ -440,15 +429,31 @@ footer {
 
 /* Photo Banner Animation */
 #photobanner {
-  height: 21rem;
+  height: 25rem;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  #photobanner {
+    height: 20rem;
+  }
+  #photobanner img {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    object-fit: cover;  
+  }
+  
+}
+
 #photobanner img {
   width: 100%;
   height: 100%;
+  padding-top: 30px;
+    padding-bottom: 30px;
   object-fit: cover;
   transition: transform 0.4s ease-in-out;
 }
@@ -728,7 +733,7 @@ body {
 }
 
 .overlay-text h2 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   margin: 0;
 }
 
