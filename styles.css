@@ -690,3 +690,64 @@ body {
     max-width: 350px;
   }
 }
+/* PhotoBanner Styles */
+#photobanner {
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(60%) blur(3px); /* Dim the image slightly for better text visibility */
+  transition: transform 0.5s ease;
+}
+
+.banner-overlay:hover .banner-image {
+  transform: scale(1.05);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.overlay-text h2 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.overlay-text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.overlay-text .full-form {
+  font-size: 20px; /* Smaller full form */
+  margin-top: -10px; /* Bring it closer to the heading */
+  margin-bottom: 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .overlay-text h2 {
+      font-size: 1.5rem;
+  }
+
+  .overlay-text p {
+      font-size: 1rem;
+  }
+}
