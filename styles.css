@@ -427,33 +427,12 @@ footer {
   background: #0056b3;
 }
 
-/* Photo Banner Animation */
-#photobanner {
-  height: 25rem;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-@media screen and (max-width: 768px) {
-  #photobanner {
-    height: 20rem;
-  }
-  #photobanner img {
-    height: 100%;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    object-fit: cover;  
-  }
-  
-}
 
 #photobanner img {
   width: 100%;
   height: 100%;
   padding-top: 30px;
-    padding-bottom: 30px;
+  padding-bottom: 30px;
   object-fit: cover;
   transition: transform 0.4s ease-in-out;
 }
@@ -555,7 +534,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-
+  
   .contact-form {
     width: 90%;
   }
@@ -614,7 +593,7 @@ footer {
     gap: 15px;
     /* Adjust spacing for smaller screens */
   }
-
+  
   .grid-layout div {
     padding: 10px;
     /* Reduce padding for smaller screens */
@@ -684,19 +663,34 @@ body {
   .page-container {
     padding: 1rem;
   }
-
+  
   .page-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-
+  
   .card {
     width: 100%;
     max-width: 350px;
   }
 }
 
-/* PhotoBanner Styles */
+/* Photo Banner Animation */
+@media screen and (max-width: 768px) {
+  #photobanner {
+    height: 20rem;
+  }
+  #photobanner img {
+    height: 100%;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    object-fit: cover;  
+  }
+  
+}
+
+/* Main Photo Banner Styles */
 #photobanner {
   position: relative;
   width: 100%;
@@ -712,15 +706,16 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(60%) blur(3px);
-  /* Dim the image slightly for better text visibility */
+  filter: brightness(50%) blur(4px); /* Better visibility */
   transition: transform 0.5s ease;
+  object-fit: cover;
 }
 
 .banner-overlay:hover .banner-image {
   transform: scale(1.05);
 }
 
+/* Overlay Text Styles */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -729,37 +724,44 @@ body {
   color: #fff;
   text-align: center;
   z-index: 2;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+  padding: 0 1rem;
+  max-width: 90vw;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
 }
 
 .overlay-text h2 {
-  font-size: 2.5rem;
-  margin: 0;
+  font-size: 2.2rem;
+  margin: 0 0 0.8rem;
+  line-height: 1.3;
 }
 
 .overlay-text p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
 }
 
-.overlay-text .full-form {
-  font-size: 20px;
-  margin-top: -10px;
-  margin-bottom: 10px;
-}
-
-/* Mobile Responsive */
+/* Responsive Styling */
 @media (max-width: 768px) {
+  #photobanner {
+    max-height: 300px;
+  }
+
   .overlay-text h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .overlay-text p {
     font-size: 0.9rem;
   }
+}
 
-  .overlay-text .full-form {
-    font-size: 0.9rem;
+@media (min-width: 1600px) {
+  .overlay-text h2 {
+    font-size: 2.6rem;
+  }
+
+  .overlay-text p {
+    font-size: 1.4rem;
   }
 }
