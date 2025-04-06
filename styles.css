@@ -241,12 +241,25 @@ a:visited {
   }
 }
 
+ul ul {
+  margin-left: 20px;
+  /* Adjust this value for desired indentation */
+  padding-left: 0;
+  /* Remove default padding to control spacing */
+}
+
+/* Optional: Add some spacing between list items */
+ul li {
+  margin-bottom: 8px;
+  /* Adjust as needed */
+}
+
 /* footer */
 footer {
   background-color: #f8f8f8;
-    padding: 30px 20px;
-    text-align: center;
-    width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  width: 100%;
 }
 
 .footer-container {
@@ -758,15 +771,15 @@ footer {
 /* Responsive Styling */
 @media (max-width: 480px) {
   .overlay-text h2 {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
-  
+
   .overlay-text p {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
-  
+
   .footer-column {
-      min-width: 120px;
+    min-width: 120px;
   }
 }
 
@@ -786,11 +799,11 @@ footer {
 
 @media (max-width: 1024px) {
   .overlay-text h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
-  
+
   .overlay-text p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 
