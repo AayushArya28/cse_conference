@@ -1,7 +1,7 @@
 const contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault(); // stop page reload
+  e.preventDefault(); // prevent default page reload
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -9,7 +9,6 @@ contactForm.addEventListener("submit", async (e) => {
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Testing with webhook.site first
   const webhookURL = "https://webhook.site/5ee07df0-f677-4527-bb51-7a775535d2a0";
 
   try {
