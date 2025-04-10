@@ -1,4 +1,4 @@
-// ✅ Firebase configuration for Impact2025
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDFIAn2N1KZr7BFizSKxWnN4TEMVlUoEPw",
   authDomain: "impact2025-contact.firebaseapp.com",
@@ -12,11 +12,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
-// Google Apps Script Web App URL
 const scriptURL = "https://script.google.com/macros/s/AKfycbzVs6iHBxCiiGe8TwhFu_jKV1Vjufz9k5myN93yJJqz-IxEOT9MBohOqKQ5t4HUVoJu/exec";
 
-// Form submission logic
-document.getElementById("contact-form").addEventListener("submit", function (e) {
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
@@ -25,7 +23,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Store in Firebase under 'contactForm'
+  // Save to Realtime Database
   database.ref("contactForm").push({
     name,
     email,
@@ -36,13 +34,16 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   });
 
   // Send to Google Sheets
-  fetch(scriptURL, {
-    method: "POST",
-    body: new URLSearchParams({ name, email, phone, subject, message }),
-  })
-    .then(() => alert("Message sent successfully!"))
-    .catch((error) => alert("Error occurred. Try again."));
+  try {
+    await fetch(scriptURL, {
+      method: "POST",
+      body: new URLSearchParams({ name, email, phone, subject, message }),
+    });
 
-  // Reset form fields
-  document.getElementById("contact-form").reset();
+    alert("Message sent successfully!");
+    e.target.reset();
+  } catch (error) {
+    alert("Error submitting form: " + error.message);
+    console.error(error);
+  }
 });
