@@ -1,7 +1,23 @@
-const contactForm = document.getElementById("contact-form");
+// ✅ Firebase configuration for Impact2025
+const firebaseConfig = {
+  apiKey: "AIzaSyDFIAn2N1KZr7BFizSKxWnN4TEMVlUoEPw",
+  authDomain: "impact2025-contact.firebaseapp.com",
+  projectId: "impact2025-contact",
+  storageBucket: "impact2025-contact.firebasestorage.app",
+  messagingSenderId: "782516212377",
+  appId: "1:782516212377:web:f9ed80a932eb97daba5e08"
+};
 
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault(); // prevent default page reload
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+
+// Google Apps Script Web App URL
+const scriptURL = "https://script.google.com/macros/s/AKfycbzVs6iHBxCiiGe8TwhFu_jKV1Vjufz9k5myN93yJJqz-IxEOT9MBohOqKQ5t4HUVoJu/exec";
+
+// Form submission logic
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -9,30 +25,24 @@ contactForm.addEventListener("submit", async (e) => {
   const subject = document.getElementById("subject").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  const webhookURL = "https://webhook.site/5ee07df0-f677-4527-bb51-7a775535d2a0";
+  // Store in Firebase under 'contactForm'
+  database.ref("contactForm").push({
+    name,
+    email,
+    phone,
+    subject,
+    message,
+    timestamp: new Date().toISOString()
+  });
 
-  try {
-    const response = await fetch(webhookURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        subject,
-        message
-      })
-    });
+  // Send to Google Sheets
+  fetch(scriptURL, {
+    method: "POST",
+    body: new URLSearchParams({ name, email, phone, subject, message }),
+  })
+    .then(() => alert("Message sent successfully!"))
+    .catch((error) => alert("Error occurred. Try again."));
 
-    if (response.ok) {
-      alert("Form submitted successfully!");
-    } else {
-      alert("Form submission failed!");
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Something went wrong.");
-  }
+  // Reset form fields
+  document.getElementById("contact-form").reset();
 });

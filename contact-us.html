@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,22 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body>
 
     <div id="navContainer"></div>
     <div id="photobannerContainer"></div>
-    
+
     <!-- Faculty Contact Section -->
     <h2 class="heading">Faculty Contacts</h2>
     <div class="faculty-container">
         <div class="faculty-card">
             <h3>Dr. Gyanendra Tiwary</h3>
             <p><strong>Phone Number:</strong> (+91)-7784930292</p>
-            <p><strong>Email ID:</strong> <a href="mailto:gyanendra.tiwary@bitmesra.ac.in">gyanendra.tiwary@gmail.com</a></p>
+            <p><strong>Email ID:</strong> <a
+                    href="mailto:gyanendra.tiwary@bitmesra.ac.in">gyanendra.tiwary@gmail.com</a></p>
         </div>
-        
+
         <div class="faculty-card">
             <h3>Dr. Amit Prakash</h3>
             <p><strong>Phone Number:</strong> (+91)-7209363319</p>
@@ -37,10 +40,12 @@
         <div id="main-content-left">
             <h2 class="heading">Contact Us</h2>
             <div class="line"></div>
-            <p>If you have any questions regarding IMPACT 2025, feel free to reach out to us by filling the form below.</p>
-            
+            <p>If you have any questions regarding IMPACT 2025, feel free to reach out to us by filling the form below.
+            </p>
+
             <div id="success-message" class="success-message" style="display: none;">
-                <p>Thank you for contacting us! Your message has been sent successfully. We'll get back to you shortly.</p>
+                <p>Thank you for contacting us! Your message has been sent successfully. We'll get back to you shortly.
+                </p>
             </div>
 
             <form id="contact-form" class="contact-form">
@@ -57,7 +62,8 @@
                 <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Enter your message here..." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message here..."
+                    required></textarea>
 
                 <button type="submit" class="btn">Send Message</button>
             </form>
@@ -70,23 +76,26 @@
     <div id="footerContainer"></div>
     <script src="js/include.js"></script>
     <script type="module" src="js/firebase-contact.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
 
-    
+
     <script>
         // Check for success parameter in URL
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('success') === 'true') {
                 const successMessage = document.getElementById('success-message');
                 successMessage.style.display = 'block';
-                
+
                 // Scroll to the success message
                 successMessage.scrollIntoView({ behavior: 'smooth' });
-                
+
                 // Hide the form or keep it visible as needed
                 // document.querySelector('form').style.display = 'none';
             }
         });
     </script>
 </body>
+
 </html>
