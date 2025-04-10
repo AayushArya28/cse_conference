@@ -1,68 +1,39 @@
-// firebase-contact.js
+const contactForm = document.getElementById("contact-form");
 
-// Import required Firebase modules
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault(); // stop page reload
 
-// Your Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDFIAn2N1KZr7BFizSKxWnN4TEMVlUoEPw",
-  authDomain: "impact2025-contact.firebaseapp.com",
-  projectId: "impact2025-contact",
-  storageBucket: "impact2025-contact.firebasestorage.app",
-  messagingSenderId: "782516212377",
-  appId: "1:782516212377:web:f9ed80a932eb97daba5e08"
-};
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+  // Testing with webhook.site first
+  const webhookURL = "https://webhook.site/5ee07df0-f677-4527-bb51-7a775535d2a0";
 
-// Google Apps Script webhook URL for Google Sheets
-const webhookUrl = "https://script.google.com/macros/s/AKfycbzRnL-sJy_8uEYCqT3jGu7-HZ03cFLREn8WdcEIKieIk4iHBGxiqqCvig4E6bh-BS72/exec";
+  try {
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        subject,
+        message
+      })
+    });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.contact-form');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-
-    const formData = {
-      name,
-      email,
-      phone,
-      subject,
-      message
-    };
-
-    try {
-      // Save to Firestore
-      await addDoc(collection(db, "contactFormSubmissions"), {
-        ...formData,
-        timestamp: serverTimestamp()
-      });
-
-      // Send to Google Sheets
-      await fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-      });
-
-      // Show success message
-      document.getElementById('success-message').style.display = 'block';
-      form.reset();
-      document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
-
-    } catch (error) {
-      alert("Error submitting form: " + error.message);
-      console.error("Error writing document: ", error);
+    if (response.ok) {
+      alert("Form submitted successfully!");
+    } else {
+      alert("Form submission failed!");
     }
-  });
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Something went wrong.");
+  }
 });
