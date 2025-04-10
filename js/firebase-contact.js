@@ -18,7 +18,9 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Form submission logic
+// Google Apps Script webhook URL for Google Sheets
+const webhookUrl = "https://script.google.com/macros/s/AKfycbzRnL-sJy_8uEYCqT3jGu7-HZ03cFLREn8WdcEIKieIk4iHBGxiqqCvig4E6bh-BS72/exec";
+
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.contact-form');
 
@@ -31,14 +33,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
 
+    const formData = {
+      name,
+      email,
+      phone,
+      subject,
+      message
+    };
+
     try {
+      // Save to Firestore
       await addDoc(collection(db, "contactFormSubmissions"), {
-        name,
-        email,
-        phone,
-        subject,
-        message,
+        ...formData,
         timestamp: serverTimestamp()
+      });
+
+      // Send to Google Sheets
+      await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
       });
 
       // Show success message
