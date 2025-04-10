@@ -816,3 +816,15 @@ footer {
     font-size: 1.4rem;
   }
 }
+
+/* Add this to your styles.css file */
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+    font-weight: bold;
+    text-align: center;
+}
