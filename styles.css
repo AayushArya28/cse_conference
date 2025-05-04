@@ -458,8 +458,24 @@ footer {
 
 .btn:hover {
   transform: scale(1.05);
-  /* Slight zoom-out effect */
   background: #0056b3;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 5px 12px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.btn2:hover {
+  transform: scale(1.05);
+  background: #75b2f4;
 }
 
 
