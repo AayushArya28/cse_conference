@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Publications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .committee-section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .line {
+            height: 3px;
+            background-color: #005aa7;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .committee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .committee-table th,
+        .committee-table td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .committee-table th {
+            background-color: #005aa7;
+            color: white;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .note {
+            font-size: 16px;
+            font-style: italic;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navContainer"></div>
+
+    <div id="photobannerContainer"></div>
+
+    <div id="main-content">
+        <div class="committee-section">
+            <h2 class="heading">Committees</h2>
+            <div class="line"></div>
+
+            <!-- Technical Programme Committee -->
+            <table class="committee-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Technical Programme Committee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Vandana Bhattacharjee</td>
+                        <td>Professor, Dept. of CSE, BIT Mesra</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Sujan Kumar Saha</td>
+                        <td>Associate Professor, Dept. of CSE, NIT Durgapur</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">More members will be added after confirmation (Consent sent to 100+)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Advisory Committee -->
+            <table class="committee-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Advisory Committee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Monit Kapoor</td>
+                        <td>Pro-VC, Amity University Bengaluru</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Supratim Biswas</td>
+                        <td>Professor, Dept. of CSE, BIT Mesra</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Manoj Kumar</td>
+                        <td>University of Wollongong in Dubai, Dubai, UAE</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">More members will be added</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="main-content-right-container"></div>
+
+    </div>
+
+    <div id="footerContainer"></div>
+
+    <script src="js/include.js"></script>
+</body>
+
+</html>
