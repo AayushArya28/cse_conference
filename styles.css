@@ -32,9 +32,9 @@ body {
   background: linear-gradient(to bottom, #0072c6, #005aa7);
   /* Blue gradient */
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -46,15 +46,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
 }
 
 .nav-links li {
   position: relative;
+  /* border: 1px dotted white; */
 }
 
 .nav-links li a {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 10px;
   text-decoration: none;
   color: white;
   font-weight: bold;

@@ -7,6 +7,70 @@
     <title>IMPACT 2025 - Home</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <style>
+        .calendar-container {
+          max-width: 700px;
+          margin: 40px auto;
+          font-family: Arial, sans-serif;
+          text-align: center;
+        }
+      
+        .calendar-title {
+          font-size: 22px;
+          margin-bottom: 10px;
+          color: #003366;
+        }
+      
+        .month-selector {
+          margin-bottom: 20px;
+          font-size: 16px;
+          padding: 6px;
+        }
+      
+        .calendar {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          gap: 5px;
+          background: #f2f2f2;
+          padding: 10px;
+          border-radius: 8px;
+        }
+      
+        .day-name, .day {
+          padding: 10px 6px;
+          border-radius: 6px;
+          min-height: 60px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
+      
+        .day-name {
+          font-weight: bold;
+          background: #003366;
+          color: white;
+        }
+      
+        .day {
+          background: white;
+          font-size: 14px;
+          position: relative;
+        }
+      
+        .highlight {
+          background: #fffbcc;
+          border: 1px solid #f0c000;
+          font-weight: bold;
+          color: #000;
+        }
+      
+        .event-name {
+          font-size: 10px;
+          color: #444;
+          margin-top: 4px;
+          font-weight: normal;
+        }
+      </style>
 </head>
 
 <body>
@@ -81,6 +145,72 @@
 
         <div id="main-content-right-container"></div>
     </div>
+
+
+    <div class="calendar-container">
+        <div class="calendar-title">Important Dates Calendar</div>
+        <select id="monthSelect" class="month-selector" onchange="generateCalendar()">
+          <option value="9">October 2025</option>
+          <option value="11">December 2025</option>
+        </select>
+        <div class="calendar" id="calendar"></div>
+      </div>
+      
+      <script>
+        const highlights = {
+          "2025-10-05": "Paper Submission Deadline",
+          "2025-10-15": "Acceptance Notification",
+          "2025-10-25": "Camera Ready Submission",
+          "2025-10-31": "Author Registration Deadline",
+          "2025-12-05": "Conference Day 1",
+          "2025-12-06": "Conference Day 2"
+        };
+      
+        function generateCalendar() {
+          const calendarEl = document.getElementById("calendar");
+          calendarEl.innerHTML = "";
+      
+          const month = parseInt(document.getElementById("monthSelect").value);
+          const year = 2025;
+      
+          const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+          daysOfWeek.forEach(day => {
+            const dayName = document.createElement("div");
+            dayName.classList.add("day-name");
+            dayName.textContent = day;
+            calendarEl.appendChild(dayName);
+          });
+      
+          const firstDay = new Date(year, month, 1).getDay();
+          const daysInMonth = new Date(year, month + 1, 0).getDate();
+      
+          for (let i = 0; i < firstDay; i++) {
+            const empty = document.createElement("div");
+            calendarEl.appendChild(empty);
+          }
+      
+          for (let day = 1; day <= daysInMonth; day++) {
+            const cell = document.createElement("div");
+            cell.classList.add("day");
+            const dateKey = `${year}-${(month + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+      
+            cell.innerHTML = `<div>${day}</div>`;
+      
+            if (highlights[dateKey]) {
+              cell.classList.add("highlight");
+              const eventEl = document.createElement("div");
+              eventEl.classList.add("event-name");
+              eventEl.textContent = highlights[dateKey];
+              cell.appendChild(eventEl);
+            }
+      
+            calendarEl.appendChild(cell);
+          }
+        }
+      
+        // Load initial calendar
+        generateCalendar();
+      </script>
 
     <div id="footerContainer"></div>
 
