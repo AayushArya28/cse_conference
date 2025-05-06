@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         .committee-section {
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
@@ -17,13 +17,22 @@
         .heading {
             font-size: 28px;
             font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         .line {
             height: 3px;
             background-color: #005aa7;
-            margin-bottom: 20px;
-            width: 100%;
+            margin: 0 auto 20px auto;
+            width: 100px;
+        }
+
+        .committee-tables-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
         }
 
         .committee-table {
@@ -51,6 +60,12 @@
             font-style: italic;
             padding: 10px 0;
         }
+
+        @media (min-width: 768px) {
+            .committee-table {
+                width: 48%;
+            }
+        }
     </style>
 </head>
 
@@ -65,54 +80,293 @@
             <h2 class="heading">Committees</h2>
             <div class="line"></div>
 
-            <!-- Technical Programme Committee -->
-            <table class="committee-table">
-                <thead>
-                    <tr>
-                        <th colspan="2">Technical Programme Committee</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dr. Vandana Bhattacharjee</td>
-                        <td>Professor, Dept. of CSE, BIT Mesra</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Sujan Kumar Saha</td>
-                        <td>Associate Professor, Dept. of CSE, NIT Durgapur</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">More members will be added after confirmation (Consent sent to 100+)</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="committee-tables-wrapper">
 
-            <!-- Advisory Committee -->
-            <table class="committee-table">
-                <thead>
-                    <tr>
-                        <th colspan="2">Advisory Committee</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Dr. Monit Kapoor</td>
-                        <td>Pro-VC, Amity University Bengaluru</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Supratim Biswas</td>
-                        <td>Professor, Dept. of CSE, BIT Mesra</td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Manoj Kumar</td>
-                        <td>University of Wollongong in Dubai, Dubai, UAE</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">More members will be added</td>
-                    </tr>
-                </tbody>
-            </table>
+                <!-- Advisory Committee -->
+                <table class="committee-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Advisory Committee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2"><strong>Chief Patron</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Indranil Manna</td>
+                            <td>Vice Chancellor, BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Patron</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Prof. D. K. Singh</td>
+                            <td>Director, BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Members</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Prof. G.P. Biswas</td>
+                            <td>IIT Kharagpur</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. C. A. Dhote</td>
+                            <td>VNIT, Nagpur</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. R. N. Yadav</td>
+                            <td>NIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Niranjan Kumar</td>
+                            <td>IIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Anup Kumar</td>
+                            <td>University of Louisville, USA</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Anurag Jain</td>
+                            <td>DAIICT, Gandhinagar</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. S. Chakraverty</td>
+                            <td>NIT Rourkela</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Rajeev Kumar</td>
+                            <td>NIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. P. K. Sinha</td>
+                            <td>IIIT Naya Raipur</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Bharat Rawal</td>
+                            <td>Capitol Tech. University, USA</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Nilesh Prajapati</td>
+                            <td>PDEU, Gandhinagar</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Arun Sharma</td>
+                            <td>IIIT Guwahati</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Umesh Bellur</td>
+                            <td>IIT Bombay</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rajeev Wankar</td>
+                            <td>University of Hyderabad</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Mayank Dave</td>
+                            <td>NIT Kurukshetra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Samrat Laha</td>
+                            <td>IIT Jodhpur</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Kundan Kumar</td>
+                            <td>IIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Hirdyesh K. Bhayyu</td>
+                            <td>NIT Rourkela</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Manish Goswami</td>
+                            <td>NIT Mizoram</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Mohammad M. Islam</td>
+                            <td>Khulna University, Bangladesh</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. B. Majhi</td>
+                            <td>NIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Sandeep K. Sood</td>
+                            <td>NIT Jalandhar</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rajesh Bose</td>
+                            <td>IIIT Bhagalpur</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. M. K. Naskar</td>
+                            <td>Jadavpur University, Kolkata</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Md. Altaf-Ul-Amin</td>
+                            <td>NAIST, Japan</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. G. Vijay Kumar</td>
+                            <td>VIT-AP University</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. S. P. Ghrera</td>
+                            <td>ABV-IIITM Gwalior</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. S. A. Pathan</td>
+                            <td>Manipal University Jaipur</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. D. S. Rajput</td>
+                            <td>MANIT Bhopal</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Shashikant Patil</td>
+                            <td>SIT, Pune</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Bibhudendra Acharya</td>
+                            <td>VSSUT, Burla</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Saurabh Mukherjee</td>
+                            <td>NIT Patna</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Technical Programme Committee -->
+                <table class="committee-table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Technical Programme Committee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Prof. Pralay Mitra</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Prof. Rakesh Kumar Singh</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Saurabh Mukherjee</td>
+                            <td>NIT Patna</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Neeraj Pathak</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Shyam S. Agrawal</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Arnab K. Maji</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Ashok Kumar Das</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rajesh K. Tiwari</td>
+                            <td>BIT Mesra</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. S. S. Sharan</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rakesh Ranjan</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Satyajit Verma</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rishi Pal</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. S. P. Yadav</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Sujit K. Sinha</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. C. B. Kumar</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Amit Kumar</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Nandani Singh</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Deepti Shikha</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Anurag Shrivastava</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Ritu Rani</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Satya Prakash</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Bimlesh Kumar</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Rakesh Roshan</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Subodh Kumar</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Ravi Ranjan</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Bhavya Sri</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Asim Ranjan</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Dr. Ajay Kumar</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                        <tr>
+                            <td>Mr. Ajay Kumar Jha</td>
+                            <td>BIT Mesra, Patna Campus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
         <div id="main-content-right-container"></div>
 
     </div>
