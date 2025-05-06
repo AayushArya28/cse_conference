@@ -2,219 +2,166 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMPACT 2025 - Home</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <style>
-        .calendar-container {
-          max-width: 700px;
-          margin: 40px auto;
-          font-family: Arial, sans-serif;
-          text-align: center;
-        }
-      
-        .calendar-title {
-          font-size: 22px;
-          margin-bottom: 10px;
-          color: #003366;
-        }
-      
-        .month-selector {
-          margin-bottom: 20px;
-          font-size: 16px;
-          padding: 6px;
-        }
-      
-        .calendar {
-          display: grid;
-          grid-template-columns: repeat(7, 1fr);
-          gap: 5px;
-          background: #f2f2f2;
-          padding: 10px;
-          border-radius: 8px;
-        }
-      
-        .day-name, .day {
-          padding: 10px 6px;
-          border-radius: 6px;
-          min-height: 60px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        }
-      
-        .day-name {
-          font-weight: bold;
-          background: #003366;
-          color: white;
-        }
-      
-        .day {
-          background: white;
-          font-size: 14px;
-          position: relative;
-        }
-      
-        .highlight {
-          background: #fffbcc;
-          border: 1px solid #f0c000;
-          font-weight: bold;
-          color: #000;
-        }
-      
-        .event-name {
-          font-size: 10px;
-          color: #444;
-          margin-top: 4px;
-          font-weight: normal;
-        }
-      </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPACT 2025 - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <style>
+    .important-dates-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .important-dates-container {
+      background-color: white;
+      border: 2px solid #005aa7;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 90, 167, 0.15);
+    }
+
+    .important-dates-heading {
+      background-color: #005aa7;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      padding: 12px 24px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .important-dates-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+      color: #000;
+    }
+
+    .important-dates-table td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #ccc;
+      vertical-align: top;
+    }
+
+    .important-dates-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .important-dates-table td strong {
+      color: #005aa7;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div id="navContainer"></div>
+  <div id="navContainer"></div>
 
-    <div id="photobannerContainer"></div>
+  <div id="photobannerContainer"></div>
 
-    <div id="main-content">
-        <div id="main-content-left">
-            <section id="about-bit-mesra" style="text-align: justify;">
-                <h2 class="heading">BIT Mesra, Ranchi</h2>
-                <div class="line"></div>
-                <p>
-                    <strong>Birla Institute of Technology (BIT), Mesra</strong>, established in 1955 by visionary
-                    <strong>B.M. Birla</strong>, is a premier technical institution in India. Located in Ranchi,
-                    Jharkhand, BIT is known for its cutting-edge research, academic excellence, and innovative
-                    initiatives.
-                </p>
-                <p>
-                    The institute pioneered India’s first <strong>Department of Space Engineering & Rocketry</strong>
-                    and established the <strong>Science & Technology Entrepreneurs’ Park (STEP)</strong> to foster
-                    innovation and entrepreneurship. BIT offers a wide range of programs in engineering, sciences,
-                    management, and architecture, and is accredited with an <strong>'A' Grade by NAAC</strong> and
-                    recognized by <strong>UGC</strong>.
-                </p>
-                <p>
-                    <strong>BIT Mesra</strong> continues to shape future leaders through excellence in research, global
-                    collaborations, and a strong industry-academia interface.
-                </p><br><br>
-            </section>
-            <section id="about-bit-patna" style="text-align: justify;">
-                <h2 class="heading">BIT Patna Campus</h2>
-                <div class="line"></div>
-                <p>
-                    Established in <strong>2006</strong> through a collaboration between the <strong>Government of
-                        Bihar</strong> and <strong>BIT Mesra</strong>, the <strong>Birla Institute of Technology (BIT),
-                        Patna Campus</strong> is dedicated to advancing education in Engineering and Technology.
-                </p>
-                <p>
-                    <strong>Academic Programs:</strong> Undergraduate programs include <strong>B.Tech.</strong> in
-                    Civil, CSE, ECE, EEE, AIML, and Mechanical Engineering, along with <strong>BBA</strong> and
-                    <strong>BCA</strong>. Postgraduate offerings include <strong>M.Tech. in Computer Science</strong>
-                    and <strong>MBA</strong>, along with <strong>Ph.D.</strong> programs across various disciplines.
-                </p>
-                <p>
-                    <strong>Campus Facilities:</strong> The 25-acre campus features modern laboratories, central
-                    library, auditoriums, hostels, sports complexes, and recreational areas, fostering a holistic
-                    academic environment.
-                </p>
-                <p>
-                    <strong>Industry Engagement and Placements:</strong> BIT Patna maintains strong industry
-                    connections, ensuring excellent placement opportunities. Notably, its students have achieved top
-                    ranks in national-level exams like <strong>GATE</strong> and <strong>UPSC ESE</strong>.
-                </p>
-                <p>
-                    <strong>BIT Patna</strong> continues its commitment to academic excellence, innovation, and
-                    producing future-ready professionals.
-                </p><br><br>
-            </section>
-            <section id="about-conference" style="text-align: justify;">
+  <div id="main-content">
+    <div id="main-content-left">
+      <section id="about-bit-mesra" style="text-align: justify;">
+        <h2 class="heading">BIT Mesra, Ranchi</h2>
+        <div class="line"></div>
+        <p>
+          <strong>Birla Institute of Technology (BIT), Mesra</strong>, established in 1955 by visionary
+          <strong>B.M. Birla</strong>, is a premier technical institution in India. Located in Ranchi,
+          Jharkhand, BIT is known for its cutting-edge research, academic excellence, and innovative
+          initiatives.
+        </p>
+        <p>
+          The institute pioneered India’s first <strong>Department of Space Engineering & Rocketry</strong>
+          and established the <strong>Science & Technology Entrepreneurs’ Park (STEP)</strong> to foster
+          innovation and entrepreneurship. BIT offers a wide range of programs in engineering, sciences,
+          management, and architecture, and is accredited with an <strong>'A' Grade by NAAC</strong> and
+          recognized by <strong>UGC</strong>.
+        </p>
+        <p>
+          <strong>BIT Mesra</strong> continues to shape future leaders through excellence in research, global
+          collaborations, and a strong industry-academia interface.
+        </p><br><br>
+      </section>
+      <section id="about-bit-patna" style="text-align: justify;">
+        <h2 class="heading">BIT Patna Campus</h2>
+        <div class="line"></div>
+        <p>
+          Established in <strong>2006</strong> through a collaboration between the <strong>Government of
+            Bihar</strong> and <strong>BIT Mesra</strong>, the <strong>Birla Institute of Technology (BIT),
+            Patna Campus</strong> is dedicated to advancing education in Engineering and Technology.
+        </p>
+        <p>
+          <strong>Academic Programs:</strong> Undergraduate programs include <strong>B.Tech.</strong> in
+          Civil, CSE, ECE, EEE, AIML, and Mechanical Engineering, along with <strong>BBA</strong> and
+          <strong>BCA</strong>. Postgraduate offerings include <strong>M.Tech. in Computer Science</strong>
+          and <strong>MBA</strong>, along with <strong>Ph.D.</strong> programs across various disciplines.
+        </p>
+        <p>
+          <strong>Campus Facilities:</strong> The 25-acre campus features modern laboratories, central
+          library, auditoriums, hostels, sports complexes, and recreational areas, fostering a holistic
+          academic environment.
+        </p>
+        <p>
+          <strong>Industry Engagement and Placements:</strong> BIT Patna maintains strong industry
+          connections, ensuring excellent placement opportunities. Notably, its students have achieved top
+          ranks in national-level exams like <strong>GATE</strong> and <strong>UPSC ESE</strong>.
+        </p>
+        <p>
+          <strong>BIT Patna</strong> continues its commitment to academic excellence, innovation, and
+          producing future-ready professionals.
+        </p><br><br>
+      </section>
+      <section id="about-conference" style="text-align: justify;">
 
-                <h2 class="heading">Welcome to IMPACT 2025</h2>
-                <div class="line"></div>
-                <p>IMPACT 2025: Intelligent Machine Processes and AI-Centric Technologies is an International Conference
-                    bringing together experts from AI, ML, Data Science, and Emerging Technologies.</p>
+        <h2 class="heading">Welcome to IMPACT 2025</h2>
+        <div class="line"></div>
+        <p>IMPACT 2025: Intelligent Machine Processes and AI-Centric Technologies is an International Conference
+          bringing together experts from AI, ML, Data Science, and Emerging Technologies.</p>
 
-            </section>
+      </section>
 
-            <a href="about.html" class="btn"><b>Learn More</b></a>
-        </div>
-
-        <div id="main-content-right-container"></div>
+      <a href="about.html" class="btn"><b>Learn More</b></a>
     </div>
 
+    <div id="main-content-right-container"></div>
+  </div>
 
-    <div class="calendar-container">
-        <div class="calendar-title">Important Dates Calendar</div>
-        <select id="monthSelect" class="month-selector" onchange="generateCalendar()">
-          <option value="9">October 2025</option>
-          <option value="11">December 2025</option>
-        </select>
-        <div class="calendar" id="calendar"></div>
-      </div>
-      
-      <script>
-        const highlights = {
-          "2025-10-05": "Paper Submission Deadline",
-          "2025-10-15": "Acceptance Notification",
-          "2025-10-25": "Camera Ready Submission",
-          "2025-10-31": "Author Registration Deadline",
-          "2025-12-05": "Conference Day 1",
-          "2025-12-06": "Conference Day 2"
-        };
-      
-        function generateCalendar() {
-          const calendarEl = document.getElementById("calendar");
-          calendarEl.innerHTML = "";
-      
-          const month = parseInt(document.getElementById("monthSelect").value);
-          const year = 2025;
-      
-          const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-          daysOfWeek.forEach(day => {
-            const dayName = document.createElement("div");
-            dayName.classList.add("day-name");
-            dayName.textContent = day;
-            calendarEl.appendChild(dayName);
-          });
-      
-          const firstDay = new Date(year, month, 1).getDay();
-          const daysInMonth = new Date(year, month + 1, 0).getDate();
-      
-          for (let i = 0; i < firstDay; i++) {
-            const empty = document.createElement("div");
-            calendarEl.appendChild(empty);
-          }
-      
-          for (let day = 1; day <= daysInMonth; day++) {
-            const cell = document.createElement("div");
-            cell.classList.add("day");
-            const dateKey = `${year}-${(month + 1).toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-      
-            cell.innerHTML = `<div>${day}</div>`;
-      
-            if (highlights[dateKey]) {
-              cell.classList.add("highlight");
-              const eventEl = document.createElement("div");
-              eventEl.classList.add("event-name");
-              eventEl.textContent = highlights[dateKey];
-              cell.appendChild(eventEl);
-            }
-      
-            calendarEl.appendChild(cell);
-          }
-        }
-      
-        // Load initial calendar
-        generateCalendar();
-      </script>
 
-    <div id="footerContainer"></div>
+  <section class="important-dates-section">
+    <div class="important-dates-container">
+      <div class="important-dates-heading">IMPORTANT DATES IMPACT-2025:</div>
+      <table class="important-dates-table">
+        <tr>
+          <td><strong>Deadline for Full Paper Submission:</strong></td>
+          <td>5th August, 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Date of Notification of Acceptance:</strong></td>
+          <td>8th October, 2025</td>
+        </tr>
+        <tr>
+          <td><strong>Camera-ready paper submission:</strong></td>
+          <td>15th October, 2025</td>
+        </tr>
+        <!-- <tr>
+          <td><strong>Last Date of Registration:</strong></td>
+          <td>30th June, 2025</td>
+        </tr> -->
+        <tr>
+          <td><strong>Conference Dates:</strong></td>
+          <td>December 5-6, 2025</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-    <script src="js/include.js"></script>
+  <div id="footerContainer"></div>
+
+  <script src="js/include.js"></script>
 </body>
 
 </html>
