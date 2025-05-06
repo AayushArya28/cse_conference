@@ -32,7 +32,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            justify-content: space-between;
+            justify-content:space-evenly;
         }
 
         .committee-table {
@@ -66,6 +66,66 @@
                 width: 48%;
             }
         }
+
+        .committee-box {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .advisory-table {
+            border-collapse: collapse;
+            width: auto;
+            /* Keeps it compact */
+            min-width: 400px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .advisory-table th {
+            background-color: #004b93;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .advisory-table td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            vertical-align: top;
+        }
+
+        .committees-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            /* Makes it responsive */
+            margin-top: 40px;
+        }
+
+        .committee-table {
+            border-collapse: collapse;
+            min-width: 400px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .committee-table th {
+            background-color: #004b93;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .committee-table td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            vertical-align: top;
+        }
     </style>
 </head>
 
@@ -80,33 +140,42 @@
             <h2 class="heading">Committees</h2>
             <div class="line"></div>
 
-            <div class="committee-tables-wrapper">
+            <div class="committees-container">
 
                 <!-- Advisory Committee -->
+                <div class="committee-table advisory-table">
+                    <table class="advisory-table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Advisory Committees</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dr. Monit Kapoor</td>
+                                <td>Amity University Bengaluru</td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Supratim Biswas</td>
+                                <td>Dept. of CSE BIT Mesra</td>
+                            </tr>
+                            <tr>
+                                <td>Dr. Manoj Kumar</td>
+                                <td>University of Wollongong in Dubai, Dubai, UAE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- Technical Programme Committee -->
                 <table class="committee-table">
                     <thead>
                         <tr>
-                            <th colspan="2">Advisory Committee</th>
+                            <th colspan="2">Technical Programme Committee</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="2"><strong>Chief Patron</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Prof. Indranil Manna</td>
-                            <td>Vice Chancellor, BIT Mesra</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><strong>Patron</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Prof. D. K. Singh</td>
-                            <td>Director, BIT Mesra, Patna Campus</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><strong>Members</strong></td>
-                        </tr>
                         <tr>
                             <td>Prof. G.P. Biswas</td>
                             <td>IIT Kharagpur</td>
@@ -235,17 +304,6 @@
                             <td>Dr. Saurabh Mukherjee</td>
                             <td>NIT Patna</td>
                         </tr>
-                    </tbody>
-                </table>
-
-                <!-- Technical Programme Committee -->
-                <table class="committee-table">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Technical Programme Committee</th>
-                        </tr>
-                    </thead>
-                    <tbody>
                         <tr>
                             <td>Prof. Pralay Mitra</td>
                             <td>BIT Mesra</td>
