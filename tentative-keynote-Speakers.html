@@ -1,52 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentative Speaker Keynote</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentative Speaker Keynote</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 15px 20px;
+      width: 280px;
+      transition: all 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .card b {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .card span {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .know-more-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 22px;
+      background-color: #005aa7;
+      color: #fff;
+      border-radius: 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s;
+      box-shadow: 0 2px 6px rgba(0,90,167,0.08);
+    }
+
+    .know-more-btn:hover {
+      background-color: #E73E36;
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
-    <div id="navContainer"></div>
+  <div id="navContainer"></div>
 
-    <div id="photobannerContainer"></div>
+  <div id="photobannerContainer"></div>
 
-    <div id="main-content">
-        <div id="main-content-left">
-            <h2 class="heading">Keynote Speaker</h2>
-            <div class="line"></div>
-            <div class="name-box grid-layout">
-                <p style="text-align:center; font-size:2em;"><b><i>Coming soon</i></b></p>
+  <div id="main-content">
+    <div id="main-content-left">
+      <h2 class="heading">Keynote Speaker</h2>
+      <div class="line"></div>
+      <div class="card-container">
 
-                <!-- <div>
-                    <p><strong>Dr. Sriparna Saha</strong><br>Department of Computer Science and Engineering<br>IIT Patna</p>
-                </div>
-                <div>
-                    <p><strong>Dr Jack (Xuejun) Li </strong><br>Department of Electrical and Electronic Engineering<br>Auckland University of Technology</p>
-                </div>
-                <div>
-                    <p><strong>Dr. Pushpak Bhattacharyya</strong><br>Department of Computer Science and Engineering<br>IIT Bombay</p>
-                </div>
-                <div>
-                    <p><strong>Dr. Balaraman Ravichandran</strong><br>Department of DSAI<br>IIT Madras</p>
-                </div>
-                <div>
-                    <p><strong>Dr. Anshul Gupta</strong><br>Area Head - IT and Technology Management<br>Dubai,UAE</p>
-                </div>
-                <div>
-                    <p><strong>Dr. Sian Lun Lau</strong><br>Sunway University<br>Malaysia</p>
-                </div> -->
-            </div>
-
+        <div class="card">
+          <img src="https://i.ibb.co/Y4x5PBtq/sriparna2.jpg" alt="Dr. Sriparna Saha">
+          <b>Dr. Sriparna Saha</b>
+          <span>Department of Computer Science and Engineering<br>IIT Patna</span>
+          <br>
+        <a href="https://www.iitp.ac.in/~sriparna/" target="_blank" class="know-more-btn" style="color: #fff;">Know More</a>
         </div>
 
-        <div id="main-content-right-container"></div>
+        <div class="card">
+          <img src="https://i.ibb.co/0pwYQ9VK/1.jpg" alt="Dr.-Ing. Sian Lun Lau">
+          <b>Dr.-Ing. Sian Lun Lau</b>
+          <span>School of Computing and Artificial Intelligence, Sunway University, MALAYSIA</span>
+          <br>
+        <a href="https://sunwayuniversity.edu.my/school-of-computing-and-artificial-intelligence/staff-profiles/professor-ts-dr-ing-lau-sian-lun" target="_blank" class="know-more-btn" style="color: #fff;">Know More</a>
+        </div>
+
+
+      </div>
     </div>
 
-    <div id="footerContainer"></div>
+    <div id="main-content-right-container"></div>
+  </div>
 
-    <script src="js/include.js"></script>
+  <div id="footerContainer"></div>
+
+  <script src="js/include.js"></script>
 </body>
 </html>
